@@ -75,8 +75,6 @@ var addValues  = function(crystal) {
     console.log("Your Score: " + currentScore);
 }
 
-
-
 // MAIN PROCESS ********************
 startGame()
 $("#diamond").click(function(){
