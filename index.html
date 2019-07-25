@@ -12,8 +12,14 @@
             <h1 class="display-4 text-center">Crystal Collector!</h1>
             <p class="lead text-center">Can you guess the right crystals to match the given score?</p>
             <hr class="my-4">
-            <p><strong></strong></p>
-            <a class="btn btn-primary btn-lg" href="#" role="button" id="instructions">Instructions</a>
+            <p><strong>Instructions:</strong></p>
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four crystals below. By clicking on a crystal you will add a specfic amount of points to your score.</p>
+            <p>You win the game by matching your score to the randome score given but if you go over... you lose the game.</p>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+            <p>Each time a new game is played, the value of the crystals will also randomly change.</p>
+            <p><strong>Good Luck!</strong></p>
+            <!-- <a class="btn btn-primary btn-lg" href="#" role="button" id="instructions">Instructions</a> -->
         </div>
 
         <div class="row mx-auto">
@@ -21,7 +27,7 @@
             <div class="col-lg-4">
 
                 <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-                    <div class="card-header text-center">Target Score:</div>
+                    <div class="card-header text-center"><strong>Target Score:</strong></div>
                         <div class="card-body">
                          <h5 class="card-title text-center" id="targetScore"></h5>
                          <p class="card-text"></p>
@@ -32,7 +38,7 @@
             <div class="col-lg-4">
 
                 <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header text-center">Your Score:</div>
+                    <div class="card-header text-center"><strong>Your Score:</strong></div>
                         <div class="card-body">
                             <h5 class="card-title text-center" id="yourScore"></h5>
                             <p class="card-text"></p>
@@ -43,10 +49,12 @@
         <div class="col-lg-4">
 
                 <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header text-center">WINS & LOSSES:</div>
+                    <!-- <div class="card-header text-center">WINS & LOSSES:</div> -->
                         <div class="card-body">
-                            <h5 class="card-title text-center"><strong>Win Count:</strong></h5>
-                            <h5 class="card-title text-center"><strong>Loss Count:</strong></h5>
+                            <div class="text-center"><strong>WINS:</strong></div>
+                            <h5 class="card-title text-center" id="winCount">0</h5>
+                            <div class="text-center"><strong>LOSSES:</strong></div>
+                            <h5 class="text-center" id="lossCount">0</h5>
                             <p class="card-text"></p>
                         </div>
                 </div>

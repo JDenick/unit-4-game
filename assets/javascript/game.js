@@ -1,5 +1,3 @@
-alert("test");
-
 // GLOBAL VARIABLES ****************
 var crystal = {
     diamond:
@@ -28,7 +26,7 @@ var currentScore = 0;
 var targetScore = 0;
 
 var winCount = 0;
-var lossCOunt = 0;
+var lossCount = 0;
 
 
 // FUNCTIONS ********************
@@ -40,7 +38,7 @@ var startNumber = function(min, max){
 var startGame = function(){
     
     // Reset the Current Score
-    var currentScore = 0;
+    currentScore = 0;
 
     // Set the new Target Score (between 19 - 120)
     targetScore = startNumber(19, 120);
@@ -71,8 +69,44 @@ var addValues  = function(crystal) {
     // Change the html to reflect changes in current score
     $("#yourScore").html(currentScore);
 
+    // Call the check function
+    check();
+
     // Testing Console
     console.log("Your Score: " + currentScore);
+}
+
+// Check if User won or lost and reset the game
+var check = function() {
+    
+    //check if currentScore is larger than targetScore
+    if (currentScore > targetScore) {
+        alert("Sorry.. You lost");
+        console.log("You Lost");
+
+        // add to loss counter
+        lossCount++;
+
+        // change loss count
+        $('#lossCount').html(lossCount);
+
+        // restart game
+        startGame();
+    } 
+
+    else if (currentScore === targetScore) {
+        alert("WINNER WINNER CHICKEN DINNER! YOU WON!");
+        console.log("You Won");
+
+        // add to loss counter
+        winCount++;
+
+        // change loss count
+        $('#winCount').html(winCount);
+
+        // restart game
+        startGame();
+    }
 }
 
 // MAIN PROCESS ********************
